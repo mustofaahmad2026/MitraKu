@@ -7,4 +7,4 @@ Landing page statis untuk GitHub Pages.
 3. Buka **Settings → Pages**. Pilih **Deploy from a branch**, lalu **main** dan **/(root)**. Klik **Save**.
 4. Setelah deployment selesai, buka link yang muncul di **Settings → Pages**. Untuk repository bernama `mitraku`, alamat defaultnya adalah `https://USERNAME.github.io/mitraku/`.
 
-Halaman publik dapat dibuka tanpa login ChatGPT. Periksa proyeksi keuangan sebelum dipublikasikan, termasuk definisi angka Rp416 juta yang ditandai di halaman.
+Halaman publik dapat dibuka tanpa login ChatGPT.
