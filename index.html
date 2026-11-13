@@ -38,6 +38,13 @@ h1{font-size:clamp(44px,6vw,86px)}h2{font-size:clamp(32px,4vw,56px)}
 .channel a{margin-top:auto;padding-top:8px;font-weight:750;text-underline-offset:4px}.channel.primary{background:#edf6df}
 footer{border-top:1px solid #dce5db}
 @media(max-width:760px){.hero,.channels{grid-template-columns:1fr}.contact-banner{align-items:flex-start;flex-direction:column}}
+</style><style>
+@media (prefers-reduced-motion: no-preference) {
+  .hero > div { animation: mitraku-enter 340ms ease-out both; }
+  .hero-media { animation: mitraku-enter 400ms ease-out 70ms both; }
+  @keyframes mitraku-enter { from {opacity:0; transform:translateY(10px)} to {opacity:1; transform:translateY(0)} }
+}
+@media (prefers-reduced-motion: reduce) { html {scroll-behavior:auto} }
 </style></head><body>
 <header id="atas"><strong>MitraKu</strong><nav aria-label="Navigasi utama"><a href="#proyeksi">Proyeksi bisnis</a><a href="kontak.html">Kontak</a></nav></header>
 <main>
@@ -49,4 +56,18 @@ footer{border-top:1px solid #dce5db}
 </div></section>
 <section id="proyeksi" class="metrics"><p class="label">Model bisnis</p><h2>Proyeksi tahun pertama</h2><p>MitraKu menargetkan komisi 5% dari nilai setiap transaksi pengadaan di platform.</p><div class="grid"><div class="card"><strong class="number">Rp312 juta</strong>Laba kotor</div><div class="card"><strong class="number">Rp204 juta</strong>Laba operasional</div><div class="card"><strong class="number">Rp183,6 juta</strong>Laba bersih</div></div><details><summary>Lihat rincian proyeksi</summary><dl><div><dt>Pendapatan dalam proyeksi</dt><dd>Rp416 juta</dd></div><div><dt>Harga pokok penjualan</dt><dd>Rp104 juta</dd></div><div><dt>Biaya operasional</dt><dd>Rp108 juta</dd></div><div><dt>Pajak dan bunga</dt><dd>Rp20,4 juta</dd></div><div><dt>Modal awal pribadi</dt><dd>Rp200 juta</dd></div><div><dt>Target pertumbuhan penjualan bulanan</dt><dd>10%</dd></div><div><dt>Proyeksi titik impas</dt><dd>Bulan ke-1</dd></div><div><dt>Estimasi LTV per klien</dt><dd>Rp423 juta</dd></div></dl></details></section>
 <section class="end"><p class="label">Peluang pasar · Provinsi Lampung</p><h2>Pengadaan kolektif untuk pasar Lampung</h2><div class="grid"><div class="card"><strong class="number">Rp3,72 triliun</strong>Estimasi pasar yang dapat dilayani (SAM)</div><div class="card"><strong class="number">Rp186 miliar</strong>Target pasar yang ingin diraih dalam dua tahun (SOM)</div></div><p>MitraKu mengajak calon mitra dan investor untuk mengembangkan pengadaan B2B di Lampung.</p></section>
-<section class="contact-banner"><div><h2>Siap membahas pengadaan Anda?</h2><p>Diskusikan kebutuhan pasokan, pengiriman bersama, atau peluang kemitraan dengan tim MitraKu.</p></div><a class="button" href="kontak.html">Hubungi perusahaan ↗</a></section></main><footer><strong>MitraKu</strong> · PT. Butuh Mitra</footer></body></html>
+<section class="contact-banner"><div><h2>Siap membahas pengadaan Anda?</h2><p>Diskusikan kebutuhan pasokan, pengiriman bersama, atau peluang kemitraan dengan tim MitraKu.</p></div><a class="button" href="kontak.html">Hubungi perusahaan ↗</a></section></main><footer><strong>MitraKu</strong> · PT. Butuh Mitra</footer><script>
+if ('IntersectionObserver' in window && matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.animate(
+        [{opacity: 0.35, transform: 'translateY(10px)'}, {opacity: 1, transform: 'translateY(0)'}],
+        {duration: 340, easing: 'ease-out'}
+      );
+      observer.unobserve(entry.target);
+    }
+  }, {threshold: 0.15});
+  document.querySelectorAll('.gallery figure img').forEach((photo) => observer.observe(photo));
+}
+</script></body></html>
