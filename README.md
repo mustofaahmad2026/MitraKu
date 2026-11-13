@@ -1,2 +1,2 @@
 # MitraKu
-Ekstrak ZIP lalu unggah semua file ke folder utama repository MitraKu. Klik **Commit changes**.
+Ekstrak ZIP dan unggah semua file ke folder utama repository yang sama, lalu klik Commit changes. Untuk preview offline, buka index.html setelah ekstraksi.
